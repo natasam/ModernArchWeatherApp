@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">WeatherCleanArch</string>
+    <string name="saved_cities">Saved cities</string>
+    <string name="weather">Weather</string>
+    <string name="search_for_a_city">Search for a city</string>
+    <string name="saved_results">Saved Results</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="error_occurred">Error occurred.</string>
+    <string name="hourly_forecast">Hourly Forecast</string>
+    <string name="daily_forecast">Daily Forecast</string>
+    <string name="close">Close</string>
+    <string name="add">Add</string>
+    <string name="pressure">PRESSURE</string>
+    <string name="km">%1$s KM</string>
+    <string name="wind">WIND</string>
+    <string name="clouds">CLOUDS</string>
+    <string name="humidity">HUMIDITY</string>
+    <string name="ok">Ok</string>
+</resources>
