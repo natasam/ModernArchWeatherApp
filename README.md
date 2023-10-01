@@ -1,9 +1,11 @@
-# ModernArchWeatherApp ![image](https://github.com/natasam/ModernArchWeatherApp/assets/16170722/49e15970-6435-4879-802c-c0a847c093df) - or Modern Anrchitecture Android App with Kotlin & Jetpack Compose 🚀
-- Welcome to BrutalWeatherApp Android application, developed with Modern Android Architecture in mind, Kotlin and the power of Jetpack Compose. Clean code structure with clear separation of concerns and unidirectional data flow. UI is ispired by Neubrutalism Style.
+# ModernArchWeatherApp - Modern Architecture Android App with Kotlin & Jetpack Compose 🚀
+- Welcome to BrutalWeatherApp Android application, developed with Modern Android Architecture in mind, Kotlin, and the power of Jetpack Compose. Clean code structure with clear separation of concerns and unidirectional data flow. UI is inspired by the Neubrutalism Style.
 
 <br/>
 
-**This Project  Is Built To Demonstrate Usage Of Google'S Recommended Android Development Tools - (Kotlin, Coroutines, Hilt, Modern Architecture Components, Udf, Room, Retrofit, Material Components, Accompanist Lib.**<br/>
+**This Project  Is Built To Demonstrate Usage Of Google's Recommended Android Development Tools - (Coroutines, Hilt, Modern Architecture Components, Udf, Room, Retrofit, Material Components, Accompanist Lib, and version catalog.**<br/>
+
+The UI is done with simplicity, in the Neobrutalism style, as the focus and the emphasis are placed on robust and clean project architecture. 
 
 ![GitHub top language](https://img.shields.io/github/languages/top/natasam/ModernArchWeatherApp) ![Static Badge](https://img.shields.io/badge/android-blue?logo=android) ![GitHub](https://img.shields.io/github/license/natasam/ModernArchWeatherApp)
 
@@ -43,9 +45,9 @@
   <br/>
   
 ## Architecture 🏗️
-* Modern App (recommended) architecture with Unidirectional Data Flow, a MVI pattern.
-* ### Data, Domain and UI Layer.
-* Find out more about the [Modern App Architecture](https://developer.android.com/topic/architecture) .
+* Modern App (recommended) architecture with Unidirectional Data Flow, and an MVI pattern.
+* ### Data, Domain, and UI Layer.
+* Learn more about the recommended [Modern App Architecture](https://developer.android.com/topic/architecture) .
 
 ![Architecture Diagram](screenshots/architecture.png)
 
