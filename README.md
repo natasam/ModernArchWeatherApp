@@ -1,9 +1,17 @@
 # ModernArchWeatherApp ![image](https://github.com/natasam/ModernArchWeatherApp/assets/16170722/49e15970-6435-4879-802c-c0a847c093df)
 
 ### Modern Android App with Kotlin & Jetpack Compose 🚀
-##### Welcome to BrutalWeatherApp Android application, developed with Modern Android Architecture in mind, Kotlin and the power of Jetpack Compose. Clean code structure with clear separation of concerns and unidirectional data flow.
+- Welcome to BrutalWeatherApp Android application, developed with Modern Android Architecture in mind, Kotlin and the power of Jetpack Compose. Clean code structure with clear separation of concerns and unidirectional data flow. UI is ispired by Neubrutalism Style.
 
 <br/>
+
+## BrutalWeatherApp is built to demonstrate use of Google's recommended Android development tools - (Kotlin, Coroutines, Hilt, Architecture Components, UDF, Room, Retrofit, Material Components, Accompanist lib)
+
+<br/>
+
+![GitHub top language](https://img.shields.io/github/languages/top/natasam/ModernArchWeatherApp) ![Static Badge](https://img.shields.io/badge/android-jetpack_compose)
+  ![GitHub](https://img.shields.io/github/license/natasam/ModernArchWeatherApp)
+
 
 ## What is here:
 * **Unidirectional Data Flow**: Ensuring a consistent and predictable behavior.
@@ -16,23 +24,18 @@
 
 <br/>
 
-You can add your Weather API key in the *Constants*.kt [YOUR_API_KEY] file in the data/config folder.
 
 
 ## Api 📦
 * [OpenWeather forecast endpoint, version 2.5](https://openweathermap.org/forecast5)
-
-# Language 📚
-
-Written in Kotlin, Jetpack Compose.
-
-## Architecture 🏗️
-* Modern App (recommended) architecture with Unidirectional Data Flow. Data, Domain and UI Layer: [Modern App Architecture](https://developer.android.com/topic/architecture)
-
-![Architecture Diagram](screenshots/architecture.png)
+* You can add your Weather API key in the *Constants*.kt [YOUR_API_KEY] file in the data/config folder.
 
 
-## Libraries 📚
+# Technologies used 📚
+- [Kotlin](https://kotlinlang.org/) - Kotlin is an official programming language for Android development.
+- [Jetpack Compose](https://developer.android.com/jetpack/compose) - Jetpack Compose is Android’s recommended modern toolkit for building native UI. 
+
+### Libraries 📚
 
 
 * [Navigation](https://developer.android.com/jetpack/compose/navigation)
@@ -46,8 +49,23 @@ Written in Kotlin, Jetpack Compose.
 * [Room](https://developer.android.com/jetpack/androidx/releases/room)
 
 * [Accompanist](https://google.github.io/accompanist/insets/)
+  
+  <br/>
+  
+## Architecture 🏗️
+* Modern App (recommended) architecture with Unidirectional Data Flow. Data, Domain and UI Layer: [Modern App Architecture](https://developer.android.com/topic/architecture)
 
+![Architecture Diagram](screenshots/architecture.png)
+
+ <br/>
+ 
 ## Design 🖼
+### Neubrutalism Style. 
+
+- Neobrutalism, often referred to as "Brutalist Web Design," is a design movement that has its roots in Brutalist architecture. The term "Brutalism" originates from the French word "brut," meaning "raw." In architecture, Brutalism is characterized by raw, unadorned, and often monolithic concrete structures. Similarly, in UI/UX design, Neobrutalism emphasizes rawness, simplicity, and a certain kind of unpolished aesthetic.
+ At its core, Neubrutalism is about stripping away the unnecessary. It's about presenting content and design in its most basic form, without the embellishments.
+- Neubrutalism is more than just a design trend; it's a statement. It challenges the norms of what an app or website should look like and offers a fresh perspective. 
+Neubrutalism is "ugly" on purpose, but some may find it beautiful and bold.
 
 * [Inspired by design Weather App (neubrutalism style)
   by Yan Ageenko](https://www.pinterest.com/pin/839569555548055567/)
@@ -70,5 +88,32 @@ Written in Kotlin, Jetpack Compose.
 
   <img src="screenshots/home.gif" alt="Android App architecture" width="200"> <img src="screenshots/search_city.gif" alt="Android App architecture" width="200">
 
+ <br/>
+ 
+## ✍️ Contact 
+<a href="mailto:greencodeinnovations@gmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="mailto:greencodeinnovations@gmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/></a>
 
+## 📝 License
+```
+MIT License
 
+Copyright (c) 2023 Natasa Misic
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the "Software"), 
+to deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or 
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included 
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
