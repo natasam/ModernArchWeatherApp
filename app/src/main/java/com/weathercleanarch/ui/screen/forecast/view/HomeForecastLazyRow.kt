@@ -33,7 +33,7 @@ fun ForecastLazyRow(forecasts: List<ForecastWeather>) {
                 borderWidth = 3.dp
             ),
 
-        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+        contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         items(forecasts) {
@@ -63,7 +63,7 @@ fun ForecastLazyRow(forecasts: List<ForecastWeather>) {
 private fun WeatherItem(date: String? = null, time: String, weatherIcon: Painter, degree: String) {
     Box {
         Column(
-            modifier = Modifier.padding(vertical = 16.dp, horizontal = 8.dp),
+            modifier = Modifier.padding(vertical = 10.dp, horizontal = 5.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
@@ -72,12 +72,12 @@ private fun WeatherItem(date: String? = null, time: String, weatherIcon: Painter
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 if (date != null) {
-                    Text(text = date, style = MaterialTheme.typography.h3.copy(fontSize = 18.sp))
+                    Text(text = date, style = MaterialTheme.typography.h3.copy(fontSize = 15.sp))
                 }
-                Text(text = time, style = MaterialTheme.typography.h3.copy(fontSize = 18.sp))
+                Text(text = time, style = MaterialTheme.typography.h3.copy(fontSize = 15.sp))
             }
             Image(painter = weatherIcon, contentDescription = null)
-            Text(text = degree, style = MaterialTheme.typography.h3.copy(fontSize = 24.sp))
+            Text(text = degree, style = MaterialTheme.typography.h3.copy(fontSize = 18.sp))
         }
     }
 }

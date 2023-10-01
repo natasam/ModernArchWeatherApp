@@ -17,7 +17,7 @@ fun ForecastTitle(text: String) {
     Text(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(start = 32.dp, top = 8.dp, bottom = 4.dp),
+            .padding(start = 32.dp, top = 12.dp, bottom = 8.dp),
         text = text,
         style = MaterialTheme.typography.h2.copy(fontSize = 18.sp)
     )

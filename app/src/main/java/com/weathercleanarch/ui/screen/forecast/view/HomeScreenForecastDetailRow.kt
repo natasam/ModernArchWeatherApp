@@ -32,14 +32,17 @@ fun CurrentWeatherDetailRow(title1: String, value1: String, title2: String, valu
 @Composable
 private fun CurrentWeatherDetailCard(title: String, value: String) {
     Column(
-        modifier = Modifier.width(160.dp).height(120.dp)
+        modifier = Modifier.width(160.dp).height(80.dp)
     ) {
         Box(modifier = Modifier.fillMaxWidth()
             .applyNeuBrutalism(
             backgroundColor = Color.Yellow,
             borderWidth = 3.dp
         ), Alignment.TopStart) {
-            Text(text = title, modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp), color= Color.Black, style = MaterialTheme.typography.h3.copy(fontSize = 18.sp))
+            Text(text = title, modifier =
+            Modifier.padding(horizontal = 8.dp, vertical = 2.dp),
+                color= Color.Black,
+                style = MaterialTheme.typography.h3.copy(fontSize = 15.sp))
         }
         Box(modifier = Modifier.fillMaxSize().border(
             BorderStroke(2.dp, SolidColor(Color.Black))) .applyNeuBrutalism(
@@ -49,7 +52,7 @@ private fun CurrentWeatherDetailCard(title: String, value: String) {
             , Alignment.Center) {
             Text(
                 text = value, color = Color.Black,
-                style = MaterialTheme.typography.h2.copy(fontSize = 36.sp)
+                style = MaterialTheme.typography.h2.copy(fontSize = 26.sp)
             )
         }
     }

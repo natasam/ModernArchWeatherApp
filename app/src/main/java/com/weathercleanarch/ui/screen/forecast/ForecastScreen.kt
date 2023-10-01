@@ -36,7 +36,10 @@ import com.weathercleanarch.ui.util.ui.NeuBrutalismHelper.applyNeuBrutalism
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun HomeScreen(viewModel: HomeScreenViewModel = hiltViewModel(), onNavigateToSearchCityScreen: () -> Unit) {
+fun HomeScreen(
+    viewModel: HomeScreenViewModel = hiltViewModel(),
+    onNavigateToSearchCityScreen: () -> Unit
+) {
     val homeScreenState by viewModel.homeForecastState.collectAsState()
     val activity = (LocalContext.current as? Activity)
 
@@ -70,8 +73,8 @@ private fun LoadingState() {
 
 @Composable
 private fun SuccessState(currentWeatherState: ForecastUiState.Success) {
-    if (currentWeatherState.forecast != null) {
-        ScreenDetailsSection(currentWeatherState.forecast)
+    currentWeatherState.forecast?.run {
+        ScreenDetailsSection(this)
     }
 }
 
@@ -82,10 +85,10 @@ private fun ErrorState(
 ) {
     currentWeatherState.exception?.let {
         ErrorMessageView(
-        modifier = Modifier.fillMaxSize(),
-        exception = it,
-        errorCardOnClick
-    )
+            modifier = Modifier.fillMaxSize(),
+            exception = it,
+            errorCardOnClick
+        )
     }
 }
 
@@ -105,42 +108,52 @@ private fun ScreenDetailsSection(forecast: Forecast) {
 private fun CurrentWeatherSection(todayWeather: Forecast, lazyListState: LazyListState) {
     Box {
         Column(
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
                 .fillMaxWidth()
                 .statusBarsPadding()
-                .padding(top = 40.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+                .padding(top = 60.dp),
         ) {
-            Text(text = todayWeather.city.cityName, style = MaterialTheme.typography.h3)
-                Column(modifier = Modifier.alpha(if(!lazyListState.canScrollForward) 0f else 1f)) {
-                    Text(
-                        modifier = Modifier.offset(x = 2.dp, y = 2.dp),
-                        text = "${todayWeather.weatherList[0].weatherData.temp.toInt()}°C",
-                        style = MaterialTheme.typography.h1.copy(
-                            shadow = Shadow(
-                                color = Color.Black,
-                                offset = Offset(12f, 20f),
-                            )
+            Text(
+                text = todayWeather.city.cityName, style = MaterialTheme.typography.h3)
+            Column(modifier = Modifier.alpha(if (!lazyListState.canScrollForward) 0f else 1f)) {
+                Text(
+                    modifier = Modifier.offset(x = 2.dp, y = 2.dp),
+                    text = "${todayWeather.weatherList[0].weatherData.temp.toInt()}°C",
+                    style = MaterialTheme.typography.h1.copy(
+                        shadow = Shadow(
+                            color = Color.Black,
+                            offset = Offset(12f, 20f),
                         )
                     )
+                )
 
                 DetailTexts(todayWeather)
-                Spacer(modifier = Modifier.size(12.dp))
-            } }
+                Spacer(modifier = Modifier.size(16.dp))
+            }
+        }
     }
 }
 
 @Composable
 private fun DetailTexts(todayWeather: Forecast) {
     val description = todayWeather.weatherList[0].weatherStatus[0].description
-    Column {
-            Text(
-                text = description,
-                style = MaterialTheme.typography.h3,
-                color = Color.Yellow
-            )
+    Column(
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+
         Text(
-            text = "Feels like ${todayWeather.weatherList[0].weatherData.feelsLike}°C",
+            text = description,
+            style = MaterialTheme.typography.h3,
+            color = Color.Yellow
+        )
+        Text(
+            text = stringResource(
+                R.string.feels_like_,
+                todayWeather.weatherList[0].weatherData.feelsLike
+            ),
             style = MaterialTheme.typography.h3
         )
     }
@@ -151,7 +164,8 @@ private fun ForecastSection(forecastData: Forecast) {
     ForecastTitle(text = stringResource(R.string.hourly_forecast))
     ForecastLazyRow(forecasts = forecastData.weatherList.take(8))
     ForecastTitle(text = stringResource(R.string.daily_forecast))
-    ForecastLazyRow(forecasts = forecastData.weatherList.subList(9,forecastData.weatherList.size))
+    ForecastLazyRow(forecasts = forecastData.weatherList.subList(9, forecastData.weatherList.size))
+    Spacer(Modifier.height(28.dp))
 }
 
 @Composable
@@ -192,7 +206,7 @@ private fun MenuIcon(onClick: () -> Unit) {
             onClick = onClick
         ) {
             Icon(
-                imageVector =  Icons.Default.Menu,
+                imageVector = Icons.Default.Menu,
                 contentDescription = null,
                 tint = Color.Black
             )

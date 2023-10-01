@@ -16,4 +16,5 @@
     <string name="clouds">CLOUDS</string>
     <string name="humidity">HUMIDITY</string>
     <string name="ok">Ok</string>
+    <string name="feels_like_">Feels like %1$s°C</string>
 </resources>
