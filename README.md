@@ -3,9 +3,7 @@
 
 <br/>
 
-** This project  is built to demonstrate usage of Google's recommended Android development tools - (Kotlin, Coroutines, Hilt, Modern Architecture Components, UDF, Room, Retrofit, Material Components, Accompanist lib) BrutalWeatherApp is built to demonstrate usage of Google's recommended Android development tools - (Kotlin, Coroutines, Hilt, Architecture Components, UDF, Room, Retrofit, Material Components, Accompanist lib).
-**
-<br/>
+**This Project  Is Built To Demonstrate Usage Of Google'S Recommended Android Development Tools - (Kotlin, Coroutines, Hilt, Modern Architecture Components, Udf, Room, Retrofit, Material Components, Accompanist Lib.**<br/>
 
 ![GitHub top language](https://img.shields.io/github/languages/top/natasam/ModernArchWeatherApp) ![Static Badge](https://img.shields.io/badge/android-blue?logo=android) ![GitHub](https://img.shields.io/github/license/natasam/ModernArchWeatherApp)
 
