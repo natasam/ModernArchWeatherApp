@@ -50,7 +50,7 @@ class HomeScreenViewModel @Inject constructor(
                     getCachedForecast()
                 } else {
                     _homeScreenState.value =
-                        ForecastUiState.Error(WeatherException.UNKNOWN_ERROR, msg = e.message)
+                        ForecastUiState.Error(WeatherException.UnknownError, msg = e.message)
                 }
             }
         }
@@ -71,7 +71,7 @@ class HomeScreenViewModel @Inject constructor(
 
             is Resource.Error -> {
                 _homeScreenState.value =
-                    ForecastUiState.Error(WeatherException.UNKNOWN_ERROR, result.message)
+                    ForecastUiState.Error(WeatherException.UnknownError, result.message)
             }
         }
     }

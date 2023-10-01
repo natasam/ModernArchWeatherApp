@@ -74,24 +74,16 @@ fun ErrorMessageView(
                 colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.error),
                 shape = RoundedCornerShape(50)
             ) {
-                Text(text = stringResource(R.string.ok).uppercase(), style = MaterialTheme.typography.button, modifier = Modifier.padding(vertical = 8.dp, horizontal = 28.dp))
+                Text(
+                    text = stringResource(R.string.ok).uppercase(),
+                    style = MaterialTheme.typography.button,
+                    modifier = Modifier.padding(vertical = 8.dp, horizontal = 28.dp)
+                )
             }
         }
     }
 }
 
 fun setErrorDescription(exception: WeatherException): String {
-    return when (exception) {
-        WeatherException.GPS_DISABLED -> ExceptionMessage.GPS_NEEDED
-        WeatherException.NO_INTERNET_CONNECTION -> ExceptionMessage.NO_INTERNET_CONNECTION
-        WeatherException.NO_PERMISSION -> ExceptionMessage.PERMISSION_NEEDED
-        else -> ExceptionMessage.UNKNOWN
-    }
-}
-
-object ExceptionMessage {
-    const val GPS_NEEDED = "Enable GPS."
-    const val PERMISSION_NEEDED = "Weather App needs location permission to show the forecast."
-    const val NO_INTERNET_CONNECTION = "Please check your internet connection."
-    const val UNKNOWN = "Something went wrong."
+    return exception.value
 }

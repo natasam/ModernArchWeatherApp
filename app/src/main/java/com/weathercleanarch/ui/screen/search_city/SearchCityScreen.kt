@@ -280,7 +280,7 @@ private fun SearchResultErrorMessage(viewModel: SearchCityViewModel) {
             .fillMaxWidth().height(260.dp)
 
             .padding(top = 16.dp),
-        exception = WeatherException.UNKNOWN_ERROR,
+        exception = WeatherException.UnknownError,
         onClick = { viewModel.errorOnClick() },
     )
 }
@@ -321,7 +321,6 @@ private fun SavedListSection(cityList: List<SelectedCity>, viewModel: SearchCity
                     .fillMaxWidth()
                     .padding(top = 16.dp),
                 weatherInfo = weatherInfo,
-
                 isStoredInDb = true,
                 onClick = { viewModel.removeMyCity(it.cityName) }
             )
@@ -332,7 +331,7 @@ private fun SavedListSection(cityList: List<SelectedCity>, viewModel: SearchCity
 @Composable
 private fun CityListErrorMessage(errorMessage: String?) {
     ErrorMessageView(
-        exception = WeatherException.UNKNOWN_ERROR,
+        exception = WeatherException.UnknownErrorWithMsg(msg = errorMessage),
         onClick = {}
     )
 }

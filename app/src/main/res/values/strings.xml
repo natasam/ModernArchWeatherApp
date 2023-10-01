@@ -4,8 +4,6 @@
     <string name="weather">Weather</string>
     <string name="search_for_a_city">Search for a city</string>
     <string name="saved_results">Saved Results</string>
-    <string name="unknown_error">Unknown Error</string>
-    <string name="error_occurred">Error occurred.</string>
     <string name="hourly_forecast">Hourly Forecast</string>
     <string name="daily_forecast">Daily Forecast</string>
     <string name="close">Close</string>
