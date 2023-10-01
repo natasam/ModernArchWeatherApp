@@ -9,7 +9,7 @@
 
 <br/>
 
-![GitHub top language](https://img.shields.io/github/languages/top/natasam/ModernArchWeatherApp) ![Static Badge](https://img.shields.io/badge/android-jetpack_compose)
+![GitHub top language](https://img.shields.io/github/languages/top/natasam/ModernArchWeatherApp) ![Static Badge](https://img.shields.io/badge/android-blue?logo=android)
   ![GitHub](https://img.shields.io/github/license/natasam/ModernArchWeatherApp)
 
 
@@ -91,7 +91,6 @@ Neubrutalism is "ugly" on purpose, but some may find it beautiful and bold.
  <br/>
  
 ## ✍️ Contact 
-<a href="mailto:greencodeinnovations@gmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/></a>
 <a href="mailto:greencodeinnovations@gmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/></a>
 
 ## 📝 License
