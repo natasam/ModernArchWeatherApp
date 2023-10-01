@@ -65,17 +65,10 @@ Similarly, in UI/UX design, Neobrutalism emphasizes rawness, simplicity, and a c
 
 ## Screens 🖼
 
-### Forecast Screen 🏠
+ | <img src="screenshots/Screenshot_0.png" alt="Android App architecture" width="200">  | <img src="screenshots/Screenshot_1.png" alt="Android App architecture" width="200">  |  <img src="screenshots/Screenshot_2.png" alt="Android App architecture" width="200">  |
+| ------------ | ------------ | ------------ |
+|  Forecast Screen   | Search city screen     | Error screen   |  
 
-  <img src="screenshots/Screenshot_0.png" alt="Android App architecture" width="200">
-
-
-### Search City Screen 🔍
-  <img src="screenshots/Screenshot_1.png" alt="Android App architecture" width="200">
-
-
-### Error Screens ⚠
-  <img src="screenshots/Screenshot_2.png" alt="Android App architecture" width="200">
 
 ### Video 👀
 
