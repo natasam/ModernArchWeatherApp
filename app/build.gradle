@@ -49,46 +49,81 @@ android {
 }
 
 dependencies {
+    // Core
+    implementation libs.androidx.core
 
-    implementation 'androidx.core:core-ktx:1.12.0'
-    implementation "androidx.compose.ui:ui:1.5.1"
-    implementation "androidx.compose.material:material:1.5.1"
-    implementation "androidx.compose.ui:ui-tooling-preview:1.5.1"
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.2'
-    implementation 'androidx.activity:activity-compose:1.7.2'
-    implementation 'androidx.compose.material3:material3:1.1.2'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    androidTestImplementation "androidx.compose.ui:ui-test-junit4:1.5.1"
-    debugImplementation "androidx.compose.ui:ui-tooling:1.5.1"
-    debugImplementation "androidx.compose.ui:ui-test-manifest:1.5.1"
+    // Activity
+    implementation libs.androidx.activity.compose
 
-    // ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2"
+    // Compose ui
+    implementation libs.androidx.compose.ui.ui
 
-    // Navigation
-    implementation "androidx.navigation:navigation-compose:2.7.3"
+    // Material
+    implementation libs.androidx.compose.material.get2()
+    implementation libs.androidx.compose.material.get3()
+    implementation libs.google.accompanist.systemUiController
+    implementation libs.google.accompanist.permission
+
+    // Work manager
+    implementation libs.androidx.work
+
+    // Google accompanist
+    implementation libs.bundles.google.accompanist
+
+    // Coroutine
+    implementation libs.kotlinx.coroutines.core
+    implementation libs.kotlinx.coroutines.android
 
     // Retrofit
-    implementation "com.squareup.retrofit2:retrofit:2.9.0"
-    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
+    implementation libs.bundles.retrofit2
 
-    // Dependency Injection
-    implementation 'com.google.dagger:hilt-android:2.45'
-    kapt 'com.google.dagger:hilt-compiler:2.45'
-    implementation "androidx.hilt:hilt-navigation-compose:1.0.0"
+    // Okhttp
+    implementation libs.okhttp3
 
-    // Location
-    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    //Location
+    implementation libs.play.services.location
 
     // Room
-    implementation 'androidx.room:room-ktx:2.5.2'
-    kapt 'androidx.room:room-compiler:2.5.2'
+    implementation libs.androidx.room.runtime
+    implementation libs.androidx.room.ktx
+    annotationProcessor libs.androidx.room.compiler
+    kapt libs.androidx.room.compiler
 
-    // System UI Controller - Accompanist
-    implementation "com.google.accompanist:accompanist-systemuicontroller:0.23.1"
-    implementation "com.google.accompanist:accompanist-permissions:0.25.0"
+    // Hilt
+    implementation libs.androidx.hilt.navigation.compose
+    implementation libs.androidx.hilt.work
+    implementation libs.google.dagger.hilt.android
+    kapt libs.google.dagger.hilt.android.compiler
 
+    // Navigation
+    implementation libs.androidx.navigation
+
+    // Lifecycle
+    implementation libs.androidx.lifecycle.runtime.compose
+    implementation libs.androidx.lifecycle.runtime.ktx
+
+    // ViewModel
+    implementation libs.androidx.lifecycle.viewmodel.compose
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+
+    // Gson
+    implementation libs.google.gson
+    // Junit
+    testImplementation libs.junit.get4()
+
+
+    // Coroutines test
+    testImplementation libs.kotlinx.coroutines.test
+
+    // MockK
+    testImplementation libs.mockk
+    testImplementation libs.mockk.agent.jvm
+
+    androidTestImplementation libs.androidx.test.junit
+    androidTestImplementation libs.androidx.test.espresso
+    androidTestImplementation libs.androidx.compose.ui.ui.test.junit
+
+    // UI Debugging
+    debugImplementation libs.androidx.compose.ui.ui.test.manifest
 }
+

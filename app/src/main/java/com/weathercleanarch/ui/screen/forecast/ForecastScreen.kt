@@ -116,19 +116,19 @@ private fun CurrentWeatherSection(todayWeather: Forecast, lazyListState: LazyLis
                 .padding(top = 60.dp),
         ) {
             Text(
-                text = todayWeather.city.cityName, style = MaterialTheme.typography.h3)
-            Column(modifier = Modifier.alpha(if (!lazyListState.canScrollForward) 0f else 1f)) {
-                Text(
-                    modifier = Modifier.offset(x = 2.dp, y = 2.dp),
-                    text = "${todayWeather.weatherList[0].weatherData.temp.toInt()}°C",
-                    style = MaterialTheme.typography.h1.copy(
-                        shadow = Shadow(
-                            color = Color.Black,
-                            offset = Offset(12f, 20f),
-                        )
+                text = todayWeather.city.cityName, style = MaterialTheme.typography.h3
+            )
+            Text(
+                modifier = Modifier.offset(x = 2.dp, y = 2.dp),
+                text = "${todayWeather.weatherList[0].weatherData.temp.toInt()}°C",
+                style = MaterialTheme.typography.h1.copy(
+                    shadow = Shadow(
+                        color = Color.Black,
+                        offset = Offset(12f, 20f),
                     )
                 )
-
+            )
+            Column(modifier = Modifier.alpha(if (!lazyListState.canScrollForward) 0f else 1f)) {
                 DetailTexts(todayWeather)
                 Spacer(modifier = Modifier.size(16.dp))
             }
