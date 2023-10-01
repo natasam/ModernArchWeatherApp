@@ -45,7 +45,9 @@
   <br/>
   
 ## Architecture 🏗️
-* Modern App (recommended) architecture with Unidirectional Data Flow, a MVI pattern. Data, Domain and UI Layer. Find out more about the [Modern App Architecture](https://developer.android.com/topic/architecture) .
+* Modern App (recommended) architecture with Unidirectional Data Flow, a MVI pattern.
+* ### Data, Domain and UI Layer.
+* Find out more about the [Modern App Architecture](https://developer.android.com/topic/architecture) .
 
 ![Architecture Diagram](screenshots/architecture.png)
 
