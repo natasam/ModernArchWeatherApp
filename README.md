@@ -1,9 +1,11 @@
-# ModernArchWeatherApp ☀
-Weather Android App written in Jetpack Compose and Kotlin, the example of Modern architectural design pattern, clean code structure with clear separation of concerns
-Modern Android App with Kotlin & Jetpack Compose 🚀
-Welcome to BrutalWeatherApp Android application, developed with Modern Android Architecture in mind, Kotlin and the power of Jetpack Compose.
+# ModernArchWeatherApp ![image](https://github.com/natasam/ModernArchWeatherApp/assets/16170722/49e15970-6435-4879-802c-c0a847c093df)
+
+### Modern Android App with Kotlin & Jetpack Compose 🚀
+##### Welcome to BrutalWeatherApp Android application, developed with Modern Android Architecture in mind, Kotlin and the power of Jetpack Compose. Clean code structure with clear separation of concerns and unidirectional data flow.
+
 <br/>
-### What is there:
+
+## What is here:
 * **Unidirectional Data Flow**: Ensuring a consistent and predictable behavior.
 * **MVI Pattern:** A robust pattern that simplifies user interactions and data updates.
 * **Separated Concerns**: Each layer has its distinct responsibility, promoting clarity and simplicity.
