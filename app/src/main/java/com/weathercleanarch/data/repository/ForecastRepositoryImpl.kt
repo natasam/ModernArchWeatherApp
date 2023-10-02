@@ -41,7 +41,7 @@ class ForecastRepositoryImpl @Inject constructor(
 
             )
         } catch (e: Exception) {
-            Resource.Error(e.message ?: Constants.UNKNOWN_ERROR)
+            Resource.Error(e.localizedMessage ?: Constants.UNKNOWN_ERROR)
         }
     }
 

@@ -5,9 +5,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-class GetSpecificCityUseCase @Inject constructor(private val mySearchCityRepositoryImpl: SearchCityRepositoryImpl) {
+class GetSpecificCityUseCase @Inject constructor(private val searchCityRepositoryImpl: SearchCityRepositoryImpl) {
     suspend operator fun invoke(cityName: String) = withContext(Dispatchers.IO){
-        mySearchCityRepositoryImpl.getSpecificCity(cityName)
+        searchCityRepositoryImpl.getSpecificCity(cityName)
     }
 
 }
