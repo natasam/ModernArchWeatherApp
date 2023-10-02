@@ -10,7 +10,7 @@ import com.weathercleanarch.data.mapper.mapToDbEntity
 
 import com.weathercleanarch.domain.entity.City
 import com.weathercleanarch.domain.entity.Forecast
-import com.weathercleanarch.domain.entity.Resource
+import com.weathercleanarch.domain.entity.Result
 import com.weathercleanarch.domain.repository.ForecastRepository
 import javax.inject.Inject
 
@@ -21,27 +21,27 @@ class ForecastRepositoryImpl @Inject constructor(
     override suspend fun getForecastData(
         latitude: Double,
         longitude: Double
-    ): Resource<Forecast> {
+    ): Result<Forecast> {
         return try {
-            Resource.Success(
+            Result.Success(
                 forecastRemoteDataSource.getForecastByLocation(
                     latitude,
                     longitude
                 )
             )
         } catch (e: Exception) {
-            Resource.Error(e.message ?: Constants.UNKNOWN_ERROR)
+            Result.Error(e.message ?: Constants.UNKNOWN_ERROR)
         }
     }
 
-    override suspend fun getForecastDataWithCityName(cityName: String): Resource<Forecast> {
+    override suspend fun getForecastDataWithCityName(cityName: String): Result<Forecast> {
         return try {
-            Resource.Success(
+            Result.Success(
                 forecastRemoteDataSource.getForecastByCityName(cityName)
 
             )
         } catch (e: Exception) {
-            Resource.Error(e.localizedMessage ?: Constants.UNKNOWN_ERROR)
+            Result.Error(e.localizedMessage ?: Constants.UNKNOWN_ERROR)
         }
     }
 

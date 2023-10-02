@@ -12,7 +12,7 @@ import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.Priority
 import com.weathercleanarch.domain.entity.Geolocation
-import com.weathercleanarch.domain.entity.Resource
+import com.weathercleanarch.domain.entity.Result
 import com.weathercleanarch.domain.entity.WeatherException
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
@@ -30,9 +30,10 @@ class GeoLocationDataSource @Inject constructor(
                 super.onLocationResult(result)
                 val location = result.lastLocation ?: result.locations.lastOrNull()
                 if (location == null) {
-                    trySend(WeatherException.NoLocationError)                } else {
+                    trySend(WeatherException.NoLocationError)
+                } else {
                     trySend(
-                        Resource.Success(
+                        Result.Success(
                             Geolocation(
                                 latitude = location.latitude, longitude = location.longitude
                             )

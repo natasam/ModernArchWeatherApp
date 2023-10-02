@@ -32,6 +32,7 @@ object SearchedCityEntityMapper {
             weatherImageDesc = model.weatherImageDesc
         )
     }
+
     fun CityDbDto.toCityEntity() = City(
         country,
         timezone,

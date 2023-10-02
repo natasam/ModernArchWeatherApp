@@ -2,7 +2,7 @@ package com.weathercleanarch.config
 
 object NetworkService {
     const val BASE_URL: String = "https://api.openweathermap.org"
-    const val API_KEY: String = "582d507f1ff4e94b64f5d5a574781061"
+    const val API_KEY: String = "API_KEY"
     const val UNITS: String = "metric"
     const val FORECAST_END_POINT = "/data/2.5/forecast"
 }

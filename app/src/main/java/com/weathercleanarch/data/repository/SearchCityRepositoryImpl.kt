@@ -22,7 +22,7 @@ class SearchCityRepositoryImpl @Inject constructor(
     }
 
     override suspend fun savedCityList(): List<SelectedCity> {
-          return  locationLocalDataSource.getMyCity().mapFromDbLocationList()
+        return locationLocalDataSource.getMyCity().mapFromDbLocationList()
     }
 
     override suspend fun deleteCity(cityName: String) {

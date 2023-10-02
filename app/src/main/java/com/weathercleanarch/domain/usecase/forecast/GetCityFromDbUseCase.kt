@@ -6,6 +6,7 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class GetCityFromDbUseCase @Inject constructor(private val forecastRepositoryImpl: ForecastRepositoryImpl) {
-    suspend operator fun invoke () = withContext(
-        Dispatchers.Default) { forecastRepositoryImpl.getCity()}
+    suspend operator fun invoke() = withContext(
+        Dispatchers.Default
+    ) { forecastRepositoryImpl.getCity() }
 }

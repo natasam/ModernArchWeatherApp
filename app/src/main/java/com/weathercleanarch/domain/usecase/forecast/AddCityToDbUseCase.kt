@@ -7,7 +7,7 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class AddCityToDbUseCase @Inject constructor(private val forecastRepositoryImpl: ForecastRepositoryImpl) {
-    suspend operator fun invoke(city: City) = withContext(Dispatchers.IO){
+    suspend operator fun invoke(city: City) = withContext(Dispatchers.IO) {
         forecastRepositoryImpl.addCity(city)
     }
 }

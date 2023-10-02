@@ -2,7 +2,17 @@ package com.weathercleanarch.ui.screen.forecast.view
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -32,24 +42,36 @@ fun CurrentWeatherDetailRow(title1: String, value1: String, title2: String, valu
 @Composable
 private fun CurrentWeatherDetailCard(title: String, value: String) {
     Column(
-        modifier = Modifier.width(160.dp).height(80.dp)
+        modifier = Modifier
+            .width(160.dp)
+            .height(80.dp)
     ) {
-        Box(modifier = Modifier.fillMaxWidth()
-            .applyNeuBrutalism(
-            backgroundColor = Color.Yellow,
-            borderWidth = 3.dp
-        ), Alignment.TopStart) {
-            Text(text = title, modifier =
-            Modifier.padding(horizontal = 8.dp, vertical = 2.dp),
-                color= Color.Black,
-                style = MaterialTheme.typography.h3.copy(fontSize = 15.sp))
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .applyNeuBrutalism(
+                    backgroundColor = Color.Yellow,
+                    borderWidth = 3.dp
+                ), Alignment.TopStart
+        ) {
+            Text(
+                text = title, modifier =
+                Modifier.padding(horizontal = 8.dp, vertical = 2.dp),
+                color = Color.Black,
+                style = MaterialTheme.typography.h3.copy(fontSize = 15.sp)
+            )
         }
-        Box(modifier = Modifier.fillMaxSize().border(
-            BorderStroke(2.dp, SolidColor(Color.Black))) .applyNeuBrutalism(
-            backgroundColor = Color.Yellow,
-            borderWidth = 2.dp
-        )
-            , Alignment.Center) {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .border(
+                    BorderStroke(2.dp, SolidColor(Color.Black))
+                )
+                .applyNeuBrutalism(
+                    backgroundColor = Color.Yellow,
+                    borderWidth = 2.dp
+                ), Alignment.Center
+        ) {
             Text(
                 text = value, color = Color.Black,
                 style = MaterialTheme.typography.h2.copy(fontSize = 26.sp)

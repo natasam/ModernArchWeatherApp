@@ -13,38 +13,39 @@ import com.weathercleanarch.domain.entity.Main
 import com.weathercleanarch.domain.entity.Weather
 import com.weathercleanarch.domain.entity.Wind
 
-    fun ForecastResponse.toForecastDto(): Forecast {
-        val forecastWeather: List<ForecastWeather> = weatherList.map {
-            ForecastWeather(
-                weatherData = Main(
-                    it.mainWeatherInfo.temp,
-                    it.mainWeatherInfo.feelsLike,
-                    it.mainWeatherInfo.pressure,
-                    it.mainWeatherInfo.humidity
-                ),
-                weatherStatus = listOf(
-                    Weather(it.weatherStatus[0].mainDescription, it.weatherStatus[0].description)
-                ),
-                wind = Wind(it.wind.speed),
-                date = it.date,
-                cloudiness = Cloudiness(it.cloudinessDto.cloudiness)
-            )
-        }
-
-        return Forecast(
-            weatherList = forecastWeather,
-            city = City(
-                city.country,
-                city.timezone,
-                city.sunrise,
-                city.sunset,
-                city.cityName,
-                Coord(
-                    city.coordinate.latitude, city.coordinate.longitude
-                )
-            )
+fun ForecastResponse.toForecastDto(): Forecast {
+    val forecastWeather: List<ForecastWeather> = weatherList.map {
+        ForecastWeather(
+            weatherData = Main(
+                it.mainWeatherInfo.temp,
+                it.mainWeatherInfo.feelsLike,
+                it.mainWeatherInfo.pressure,
+                it.mainWeatherInfo.humidity
+            ),
+            weatherStatus = listOf(
+                Weather(it.weatherStatus[0].mainDescription, it.weatherStatus[0].description)
+            ),
+            wind = Wind(it.wind.speed),
+            date = it.date,
+            cloudiness = Cloudiness(it.cloudinessDto.cloudiness)
         )
     }
+
+    return Forecast(
+        weatherList = forecastWeather,
+        city = City(
+            city.country,
+            city.timezone,
+            city.sunrise,
+            city.sunset,
+            city.cityName,
+            Coord(
+                city.coordinate.latitude, city.coordinate.longitude
+            )
+        )
+    )
+}
+
 fun Forecast.mapToDbEntity(): ForecastDbDto {
     val forecastWeather = weatherList[0]
     return ForecastDbDto(
@@ -57,9 +58,11 @@ fun Forecast.mapToDbEntity(): ForecastDbDto {
         description = forecastWeather.weatherStatus[0].description,
         mainDescription = forecastWeather.weatherStatus[0].mainDescription,
         date = forecastWeather.date,
-        cloudiness = forecastWeather.cloudiness.cloudiness)
+        cloudiness = forecastWeather.cloudiness.cloudiness
+    )
 
 }
+
 fun mapFromDbDtoList(forecastDbList: List<ForecastDbDto>, entityCity: CityDbDto): Forecast {
     return Forecast(
         forecastDbList.map {

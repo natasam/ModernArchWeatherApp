@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.weathercleanarch.domain.entity.City
 import com.weathercleanarch.domain.entity.Forecast
-import com.weathercleanarch.domain.entity.Resource
+import com.weathercleanarch.domain.entity.Result
 import com.weathercleanarch.domain.entity.WeatherException
 import com.weathercleanarch.domain.usecase.forecast.AddCityToDbUseCase
 import com.weathercleanarch.domain.usecase.forecast.AddForecastToDbUseCase
@@ -58,7 +58,7 @@ class HomeScreenViewModel @Inject constructor(
 
     private suspend fun fetchForecast() {
         when (val result = getForecastUseCase.invoke()) {
-            is Resource.Success -> {
+            is com.weathercleanarch.domain.entity.Resource.Result.Success -> {
                 _homeScreenState.value = ForecastUiState.Success(result.data)
                 if (result.data != null) {
                     if (!isForecastCached()) {
@@ -69,7 +69,7 @@ class HomeScreenViewModel @Inject constructor(
                 }
             }
 
-            is Resource.Error -> {
+            is com.weathercleanarch.domain.entity.Resource.Result.Error -> {
                 _homeScreenState.value =
                     ForecastUiState.Error(WeatherException.UnknownError, result.message)
             }
