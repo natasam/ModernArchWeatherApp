@@ -58,7 +58,7 @@ class HomeScreenViewModel @Inject constructor(
 
     private suspend fun fetchForecast() {
         when (val result = getForecastUseCase.invoke()) {
-            is com.weathercleanarch.domain.entity.Resource.Result.Success -> {
+            is Result.Success -> {
                 _homeScreenState.value = ForecastUiState.Success(result.data)
                 if (result.data != null) {
                     if (!isForecastCached()) {
@@ -69,7 +69,7 @@ class HomeScreenViewModel @Inject constructor(
                 }
             }
 
-            is com.weathercleanarch.domain.entity.Resource.Result.Error -> {
+            is Result.Error -> {
                 _homeScreenState.value =
                     ForecastUiState.Error(WeatherException.UnknownError, result.message)
             }

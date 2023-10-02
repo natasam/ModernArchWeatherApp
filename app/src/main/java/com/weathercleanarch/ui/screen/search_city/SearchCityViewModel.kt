@@ -83,11 +83,11 @@ class SearchCityViewModel @Inject constructor(
 
     private suspend fun fetchForecastWithCityName(cityName: String) {
         when (val result = getForecastWithCityName.invoke(cityName)) {
-            is com.weathercleanarch.domain.entity.Resource.Result.Success -> {
+            is Result.Success -> {
                 _searchCityState.value = SearchCityUiState.Success(result.data)
             }
 
-            is com.weathercleanarch.domain.entity.Resource.Result.Error -> {
+            is Result.Error -> {
                 _searchCityState.value = SearchCityUiState.Error(result.message)
             }
 
@@ -127,7 +127,7 @@ class SearchCityViewModel @Inject constructor(
             try {
                 getSavedCitiesUseCase.invoke().forEach { myCity ->
                     when (val result = getForecastWithCityName.invoke(myCity.cityName)) {
-                        is com.weathercleanarch.domain.entity.Resource.Result.Success -> {
+                        is Result.Success -> {
                             if (result.data != null) {
                                 updateSavedCityUseCase.invoke(
                                     SelectedCity(
@@ -146,7 +146,7 @@ class SearchCityViewModel @Inject constructor(
                             }
                         }
 
-                        is com.weathercleanarch.domain.entity.Resource.Result.Error -> {
+                        is Result.Error -> {
                             if (result.message == Constants.UNKNOWN_HOST) {
                                 _savedCitiesState.value =
                                     SavedCitiesUiState.Success(getSavedCitiesUseCase.invoke())
