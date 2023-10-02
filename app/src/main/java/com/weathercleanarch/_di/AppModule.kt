@@ -1,8 +1,8 @@
-package com.weathercleanarch.config.di
+package com.weathercleanarch._di
 
 import android.app.Application
 import com.weathercleanarch.data.datasource.remote.WeatherApi
-import com.weathercleanarch.config.NetworkService
+import com.weathercleanarch.data.datasource.NetworkService
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import dagger.Module

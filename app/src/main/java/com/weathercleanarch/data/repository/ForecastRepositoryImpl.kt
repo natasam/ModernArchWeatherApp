@@ -1,6 +1,5 @@
 package com.weathercleanarch.data.repository
 
-import com.weathercleanarch.config.Constants
 import com.weathercleanarch.data.datasource.local.database.ForecastLocalDataSource
 import com.weathercleanarch.data.datasource.remote.ForecastRemoteDataSource
 import com.weathercleanarch.data.mapper.SearchedCityEntityMapper.toCityDbDto
@@ -30,7 +29,7 @@ class ForecastRepositoryImpl @Inject constructor(
                 )
             )
         } catch (e: Exception) {
-            Result.Error(e.message ?: Constants.UNKNOWN_ERROR)
+            Result.Error(e.message ?: "UNKNOWN ERROR")
         }
     }
 
@@ -41,7 +40,7 @@ class ForecastRepositoryImpl @Inject constructor(
 
             )
         } catch (e: Exception) {
-            Result.Error(e.localizedMessage ?: Constants.UNKNOWN_ERROR)
+            Result.Error(e.localizedMessage ?: "UNKNOWN ERROR")
         }
     }
 

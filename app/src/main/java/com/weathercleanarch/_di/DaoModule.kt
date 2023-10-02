@@ -1,4 +1,4 @@
-package com.weathercleanarch.config.di
+package com.weathercleanarch._di
 
 import com.weathercleanarch.data.datasource.local.database.db.CityDao
 import com.weathercleanarch.data.datasource.local.database.db.ForecastDao

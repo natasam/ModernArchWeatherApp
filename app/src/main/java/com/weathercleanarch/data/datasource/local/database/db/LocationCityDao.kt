@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.weathercleanarch.data.datasource.local.database.model.LocationCityDbDto
-import com.weathercleanarch.config.Database
+import com.weathercleanarch.data.datasource.Database
 
 @Dao
 interface LocationCityDao {

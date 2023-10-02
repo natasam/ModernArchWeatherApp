@@ -1,7 +1,7 @@
 package com.weathercleanarch.data.datasource.remote
 
 import com.weathercleanarch.data.datasource.remote.response.ForecastResponse
-import com.weathercleanarch.config.NetworkService
+import com.weathercleanarch.data.datasource.NetworkService
 import retrofit2.http.GET
 import retrofit2.http.Query
 

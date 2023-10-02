@@ -3,7 +3,7 @@ package com.weathercleanarch.data.datasource.local.database.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.weathercleanarch.config.Database
+import com.weathercleanarch.data.datasource.Database
 
 @Entity(tableName = Database.forecast_table)
 data class ForecastDbDto(

@@ -1,9 +1,9 @@
-package com.weathercleanarch.config.di
+package com.weathercleanarch._di
 
 import android.content.Context
 import androidx.room.Room
 import com.weathercleanarch.data.datasource.local.database.db.WeatherDatabase
-import com.weathercleanarch.config.Database
+import com.weathercleanarch.data.datasource.Database
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

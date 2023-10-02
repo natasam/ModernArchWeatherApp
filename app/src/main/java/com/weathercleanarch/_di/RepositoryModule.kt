@@ -1,4 +1,4 @@
-package com.weathercleanarch.config.di
+package com.weathercleanarch._di
 
 import com.weathercleanarch.data.repository.ForecastRepositoryImpl
 import com.weathercleanarch.data.repository.GeolocationRepositoryImpl

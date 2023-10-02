@@ -1,4 +1,4 @@
-package com.weathercleanarch.config
+package com.weathercleanarch.data.datasource
 
 object NetworkService {
     const val BASE_URL: String = "https://api.openweathermap.org"
@@ -14,11 +14,6 @@ object Database {
     const val location_city_table = "location_city_table"
 }
 
-object Constants {
-    const val UNKNOWN_ERROR = "An unknown error occurred."
-    const val FILL_FIELD = "Please fill in the field."
-    const val UNKNOWN_HOST = "Unable to resolve host. No address associated with hostname"
-}
 
 
 

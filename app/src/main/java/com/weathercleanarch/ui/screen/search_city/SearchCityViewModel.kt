@@ -6,7 +6,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.weathercleanarch.config.Constants
 import com.weathercleanarch.domain.entity.Result
 import com.weathercleanarch.domain.entity.SelectedCity
 import com.weathercleanarch.domain.usecase.forecast.GetForecastWithCityNameUseCase
@@ -59,7 +58,7 @@ class SearchCityViewModel @Inject constructor(
                 if (checkSearchFieldValue()) {
                     fetchForecastWithCityName(searchFieldValue)
                 } else {
-                    _searchCityState.value = SearchCityUiState.Error(Constants.FILL_FIELD)
+                    _searchCityState.value = SearchCityUiState.Error("Fill in the field")
                 }
             } catch (e: Exception) {
                 _searchCityState.value = SearchCityUiState.Error(e.message)
@@ -147,7 +146,7 @@ class SearchCityViewModel @Inject constructor(
                         }
 
                         is Result.Error -> {
-                            if (result.message == Constants.UNKNOWN_HOST) {
+                            if (result.message?.contains("Unable to resolve host.") == true) {
                                 _savedCitiesState.value =
                                     SavedCitiesUiState.Success(getSavedCitiesUseCase.invoke())
                             } else {
