@@ -53,7 +53,7 @@ The UI is done with simplicity, in the Neobrutalism style, as the focus and the 
 
  <br/>
  
-## Design 🖼
+## Crazy Design 🖼 - Focus is on the architecture but still...
 ### Neubrutalism Style
 
 - Neobrutalism, often referred to as "Brutalist Web Design," is a design movement that has its roots in Brutalist architecture. The term "Brutalism" originates from the French word "brut," meaning "raw." In architecture,** Brutalism is characterized by raw, unadorned, and often monolithic concrete structures. **
