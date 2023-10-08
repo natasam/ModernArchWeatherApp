@@ -47,6 +47,8 @@ The UI is done with simplicity, in the Neobrutalism style, as the focus and the 
 ## Architecture 🏗️
 * Modern App (recommended) architecture with Unidirectional Data Flow, and an MVI pattern.
 * ### Data, Domain, and UI Layer.
+* In Android, a repository is typically a producer of UI data that has the user interface (UI) as the consumer that ultimately displays the data. Other times, the UI layer is a producer of user input events and other layers of the hierarchy consume them. Layers in between the producer and consumer usually act as intermediaries that modify the stream of data to adjust it to the requirements of the following layer.
+
 * Learn more about the recommended [Modern App Architecture](https://developer.android.com/topic/architecture) .
 
 ![Architecture Diagram](screenshots/architecture.png)
