@@ -11,8 +11,7 @@ The UI is done with simplicity, in the Neobrutalism style, as the focus and the 
 
 
 ## What is included:
-* **Unidirectional Data Flow**: Ensuring a consistent and predictable behavior.
-* **MVI Pattern:** A robust pattern that simplifies user interactions and data updates.
+* **Unidirectional Data Flow**: Ensuring a consistent and predictable behavior. A robust pattern that simplifies user interactions and data updates.
 * **Separated Concerns**: Each layer has its distinct responsibility, promoting clarity and simplicity.
 * **Single Source of Truth**: All layers rely on one authoritative data source, eliminating inconsistencies.
 * **Domain Layer**: An optional layer that encapsulates all the business logic, making the app robust and efficient, making the app's core functions clear and concise.
@@ -45,7 +44,7 @@ The UI is done with simplicity, in the Neobrutalism style, as the focus and the 
   <br/>
   
 ## Architecture 🏗️
-* Modern App (recommended) architecture with Unidirectional Data Flow, and an MVI pattern.
+* Modern, recommended by Google, App architecture with Unidirectional Data Flow.
 * ### Data, Domain, and UI Layer.
 * In Android, a repository is typically a producer of UI data that has the user interface (UI) as the consumer that ultimately displays the data. Other times, the UI layer is a producer of user input events and other layers of the hierarchy consume them. Layers in between the producer and consumer usually act as intermediaries that modify the stream of data to adjust it to the requirements of the following layer.
 
